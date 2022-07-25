@@ -10,7 +10,7 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 #include <stdio.h>
 #include <unistd.h>
 
-int popen2(char* cmd, FILE** in, FILE** out) {
+static inline int popen2(char* cmd, FILE** in, FILE** out) {
 	pid_t cp;
 	int stdin_pipe[2];
 	int stdout_pipe[2];
